@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>翔腾机械 - 联系我们</title>
+  
+  <!-- 引入外部CSS文件 -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+  
+  <!-- 引入EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+  <!-- ============================================ -->
+  <!-- 导航栏容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="header-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 主内容区域 -->
+  <!-- ============================================ -->
+  <main id="main-content">
+    <section class="contact-page">
+      <div class="contact-container">
+        <!-- 页面标题 -->
+        <div class="page-header">
+          <h1>Contact Us</h1>
+          <p>We look forward to working with you soon</p>
+        </div>
+
+        <!-- 联系信息 -->
+        <div class="contact-info">
+          <div class="info-card">
+            <div class="icon">📞</div>
+            <h3>Contact number</h3>
+            <p>400-888-8888</p>
+            <p>0757-88888888</p>
+          </div>
+          <div class="info-card">
+            <div class="icon">✉️</div>
+            <h3>Email</h3>
+            <p>contact@yajufurniture.com</p>
+            <p>sales@yajufurniture.com</p>
+          </div>
+          <div class="info-card">
+            <div class="icon">📍</div>
+            <h3>Company address</h3>
+            <p>Guangdong, Shenzhen, China</p>
+            <p>Leifeng, 888 Street</p>
+          </div>
+        </div>
+
+        <!-- 表单和地图 -->
+        <div class="contact-content">
+          <!-- 联系表单 -->
+          <div class="contact-form">
+            <h2>Message consultation</h2>
+            <div class="success-message" id="success-message">Message sent successfully!</p></div>
+            <form id="page-contact-form">
+              <input type="hidden" name="user_from" value="机械工厂">
+              <div class="form-group">
+                <label>Name <span class="required">*</span></label>
+                <input type="text" name="user_name" required>
+                <span class="error-message"></span>
+              </div>
+              <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" name="user_phone">
+                <span class="error-message"></span>
+              </div>
+              <div class="form-group">
+                <label>Email <span class="required">*</span></label>
+                <input type="email" name="user_email" required>
+                <span class="error-message"></span>
+              </div>
+              <div class="form-group">
+                <label>Message content <span class="required">*</span></label>
+                <textarea name="user_message" rows="4" required></textarea>
+                <span class="error-message"></span>
+              </div>
+              <button type="submit" class="btn-submit">Submit message</button>
+              <span class="form-error" id="form-error"></span>
+            </form>
+          </div>
+
+          <!-- 地图区域 -->
+          <div class="map-section">
+            <iframe
+              width="100%"
+              height="100%"
+              style="border:0; border-radius: 10px;"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=22.9465620569358, 113.09033976207228&z=15&hl=zh-CN&output=embed">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- 服务时间 -->
+        <div class="hours-section">
+          <h3>Service time</h3>
+          <div class="hours-grid">
+            <div class="hour-item">
+              <div class="day">Monday</div>
+              <div class="time">9:00-18:00</div>
+            </div>
+            <div class="hour-item">
+              <div class="day">Tuesday</div>
+              <div class="time">9:00-18:00</div>
+            </div>
+            <div class="hour-item">
+              <div class="day">Wednesday</div>
+              <div class="time">9:00-18:00</div>
+            </div>
+            <div class="hour-item">
+              <div class="day">Thursday</div>
+              <div class="time">9:00-18:00</div>
+            </div>
+            <div class="hour-item">
+              <div class="day">Friday</div>
+              <div class="time">9:00-18:00</div>
+            </div>
+            <div class="hour-item">
+              <div class="day">Saturday</div>
+              <div class="time">10:00-17:00</div>
+            </div>
+            <div class="hour-item">
+              <div class="day">Sunday</div>
+              <div class="time">Rest</div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================ -->
+  <!-- 底部信息栏容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="footer-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 浮动联系按钮容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="float-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 联系模态框容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="modal-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 引入外部JavaScript文件 -->
+  <!-- ============================================ -->
+  <script src="js/components.js"></script>
+  <script>
+    // 页面加载完成后初始化组件
+    document.addEventListener('DOMContentLoaded', function() {
+      initPageComponents('contact');
+      
+      // 初始化联系页面表单
+      initContactPageForm('page-contact-form', 'success-message');
+    });
+  </script>
+</body>
+</html>

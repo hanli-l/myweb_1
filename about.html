@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>翔腾机械 - 关于我们</title>
+  
+  <!-- 引入外部CSS文件 -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
+  
+  <!-- 引入EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+  <!-- ============================================ -->
+  <!-- 导航栏容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="header-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 主内容区域 -->
+  <!-- ============================================ -->
+  <main id="main-content">
+    <section class="about-page">
+      <div class="about-container">
+        <!-- 页面标题 -->
+        <div class="page-header">
+          <h1>About Us</h1>
+          <p>The development history and corporate philosophy of Xiangteng Machinery</p>
+        </div>
+
+        <!-- 公司简介 -->
+        <div class="company-intro">
+          <div class="intro-image">
+            <img src="assets/home/工厂.jpg" alt="工厂图">
+          </div>
+          <div class="intro-text">
+            <h2>Our Story</h2>
+            <p>Xiangteng Machinery was founded in 2005 as a comprehensive machinery enterprise. Headquartered in Foshan City, Guangdong Province, the company boasts modern production bases and a professional design team</p>
+            <p>Over the past fifteen years, we have consistently adhered to the business philosophy of "Quality as Foundation, Innovation as Core", and strived to provide customers with high-quality mechanical products and premium service experiences.</p>
+            <p>公司产品涵盖客厅、卧室、餐厅、书房等多个系列，风格多样，满足不同客户的需求。无论是现代简约、欧式古典还是中式传统，我们都能为您提供满意的解决方案。</p>
+          </div>
+        </div>
+
+        <!-- 使命愿景 -->
+        <div class="mission-section">
+          <div class="mission-card">
+            <h3>Corporate Mission</h3>
+            <p>Manufacture professional mechanical equipment with exquisite craftsmanship</p>
+          </div>
+          <div class="vision-card">
+            <h3>Corporate Vision</h3>
+            <p>To become a leading brand in China's machinery industry, bring professional mechanical equipment to every country and evolve into a byword for specialized machinery.</p>
+          </div>
+        </div>
+
+        <!-- 公司数据 -->
+        <div class="stats-section">
+          <div class="stats-container">
+            <div class="stat-card">
+              <div class="number">18+</div>
+              <div class="label">Years of industry experience</div>
+            </div>
+            <div class="stat-card">
+              <div class="number">500+</div>
+              <div class="label">Cooperative Customers</div>
+            </div>
+            <div class="stat-card">
+              <div class="number">10K+</div>
+              <div class="label">Service Families</div>
+            </div>
+            <div class="stat-card">
+              <div class="number">150+</div>
+              <div class="label">Professional Members</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 团队介绍 -->
+        <!-- <div class="team-section">
+          <div class="section-title">
+            <h2>核心团队</h2>
+            <p>专业的团队，为您提供优质服务</p>
+          </div>
+          <div class="team-grid">
+            <div class="team-card">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150" alt="团队成员">
+              <h4>张总经理</h4>
+              <p>创始人 / 总经理</p>
+            </div>
+            <div class="team-card">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150" alt="团队成员">
+              <h4>李设计师</h4>
+              <p>首席设计师</p>
+            </div>
+            <div class="team-card">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150" alt="团队成员">
+              <h4>王经理</h4>
+              <p>销售总监</p>
+            </div>
+            <div class="team-card">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150" alt="团队成员">
+              <h4>陈工程师</h4>
+              <p>生产技术总监</p>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- 发展历程 -->
+        <div class="timeline-section">
+          <div class="section-title">
+            <h2>Development History</h2>
+            <p>Witness the growth trajectory of Xiangteng Machinery</p>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <div class="timeline-year">2005</div>
+                <div class="timeline-title">Company establishment</div>
+                <div class="timeline-desc">Xiangteng Machinery was founded in 2005 as a comprehensive machinery enterprise.</div>
+              </div>
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <div class="timeline-year">2010</div>
+                <div class="timeline-title">Expand production</div>
+                <div class="timeline-desc">Establish a modern production base and introduce advanced production equipment.</div>
+              </div>
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <div class="timeline-year">2015</div>
+                <div class="timeline-title">Brand upgrade</div>
+                <div class="timeline-desc">Complete brand iteration, implement standardized production lines, and launch the next generation of industrial machinery products.</div>
+              </div>
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-content">
+                <div class="timeline-year">2020</div>
+                <div class="timeline-title">Digital transformation upgrade</div>
+                <div class="timeline-desc">Introduce a production management system, improve operational efficiency.</div>
+              </div>
+              <div class="timeline-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================ -->
+  <!-- 底部信息栏容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="footer-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 浮动联系按钮容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="float-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 联系模态框容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="modal-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 引入外部JavaScript文件 -->
+  <!-- ============================================ -->
+  <script src="js/components.js"></script>
+  <script>
+    // 页面加载完成后初始化组件
+    document.addEventListener('DOMContentLoaded', function() {
+      initPageComponents('about');
+    });
+  </script>
+</body>
+</html>

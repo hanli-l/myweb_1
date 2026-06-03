@@ -1,0 +1,307 @@
+/* ============================================ */
+/* 全局样式重置 */
+/* ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8fafc;
+}
+
+/* ============================================ */
+/* 固定头部导航栏 */
+/* ============================================ */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  /* background-color:rgba(0, 0, 0, 0.3) ; */
+}
+
+.nav-container {
+  max-width: 1600px;
+  height: 132px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #1e3a5f;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav a {
+  margin: 0 28px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-size: 20px;
+}
+
+nav a:hover,
+nav a.active {
+  color: #2563eb;
+}
+
+.btn-book {
+  background: #3370e3a6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* ============================================ */
+/* 主内容区域 */
+/* ============================================ */
+#main-content {
+  padding-top: 66px;
+  margin-top: 66px;
+  min-height: calc(100vh - 200px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================================ */
+/* 底部信息栏 */
+/* ============================================ */
+footer {
+  background: #1e3a5f;
+  color: white;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-contact {
+  margin-bottom: 15px;
+}
+
+.footer-links h4 {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.map-container {
+  margin-top: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* ============================================ */
+/* 浮动联系按钮 */
+/* ============================================ */
+.float-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 150px;
+  width: 60px;
+  height: 60px;
+  background: #0982d3;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ============================================ */
+/* 联系模态框 */
+/* ============================================ */
+.contact-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  width: 450px;
+  max-width: 90%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  color: #1e3a5f;
+}
+
+.modal-close {
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-group.has-error input,
+.form-group.has-error textarea {
+  border-color: #ff4444;
+  box-shadow: 0 0 0 2px rgba(255, 68, 68, 0.1);
+}
+
+.error-message {
+  display: none;
+  color: #ff4444;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.form-error {
+  display: block;
+  color: #ff4444;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.required {
+  color: #ff4444;
+}
+
+.btn-submit {
+  background: #2563eb;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.modal-success {
+  display: none;
+  text-align: center;
+  padding: 40px;
+}
+
+.modal-success.active {
+  display: block;
+}
+
+.modal-success i {
+  font-size: 48px;
+  color: #22c55e;
+  margin-bottom: 20px;
+}
+
+/* ============================================ */
+/* 响应式布局 */
+/* ============================================ */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}

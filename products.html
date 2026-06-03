@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>翔腾机械 - 产品中心</title>
+  
+  <!-- 引入外部CSS文件 -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
+  
+  <!-- 引入EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+  <!-- ============================================ -->
+  <!-- 导航栏容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="header-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 主内容区域 -->
+  <!-- ============================================ -->
+  <main id="main-content">
+    <section class="products-page">
+      <div class="products-section">
+        <!-- 左侧分类导航 -->
+        <div class="sidebar-wrapper">
+          <div class="sidebar">
+            <h3>Product Categories</h3>
+            <ul class="category-list">
+              <li><a href="#" class="category-link active" data-category="all">All products</a></li>
+              <li><a href="#" class="category-link" data-category="living">岩板热弯盆机器</a></li>
+              <li><a href="#" class="category-link" data-category="bedroom">岩板深加工机器</a></li>
+              <li><a href="#" class="category-link" data-category="dining">陶瓷深加工机器</a></li>
+              <!-- <li><a href="#" class="category-link" data-category="study">书房家具</a></li> -->
+            </ul>
+            <div class="sidebar-divider"></div>
+            <button class="btn-expert" onclick="location.href='contact.html'">咨询专家</button>
+          </div>
+        </div>
+
+        <!-- 右侧产品内容 -->
+        <div class="products-wrapper">
+          <h2>Product Display</h2>
+          
+          <!-- 产品详情区域 -->
+          <div class="product-detail" id="product-detail">
+            <!-- 关闭按钮 -->
+            <button class="btn-close" onclick="goBackToList()">×</button>
+            
+            <!-- 产品标题区域 -->
+            <div class="detail-header">
+              <!-- <div class="product-category" id="product-category"></div> -->
+              <h2 class="product-title" id="product-title"></h2>
+            </div>
+            
+            <!-- 照片画廊区域 -->
+            <div id="product-gallery" class="product-gallery"></div>
+          </div>
+
+          <!-- 产品网格 -->
+          <div class="products-container" id="products-grid">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================ -->
+  <!-- 底部信息栏容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="footer-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 浮动联系按钮容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="float-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 联系模态框容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="modal-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 引入外部JavaScript文件 -->
+  <!-- ============================================ -->
+  <script src="js/components.js"></script>
+  <script src="js/products.js"></script>
+  <script>
+    // 页面加载完成后初始化组件
+    document.addEventListener('DOMContentLoaded', function() {
+      initPageComponents('products');
+    });
+  </script>
+</body>
+</html>

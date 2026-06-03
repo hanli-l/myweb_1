@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>翔腾机械 - 首页</title>
+  
+  <!-- 引入外部CSS文件 -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  
+  <!-- 引入EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+  <!-- ============================================ -->
+  <!-- 导航栏容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="header-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 主内容区域 -->
+  
+  <main id="main-content">
+    <!-- Hero区域 -->
+    <section class="hero">
+      <h1>Forge Precision & Smart Manufacturing</h1>
+      <p>Craftsmanship builds quality, ingenuity forges equipment. Rooted in machinery manufacturing, we rely on proven craftsmanship and rigorous quality control to deliver stable, durable customized machinery for diverse industries</p>
+      <!-- <div class="hero-btns">
+        <button class="btn btn-primary" onclick="location.href='products.html'">浏览产品</button>
+        <button class="btn btn-secondary" onclick="location.href='about.html'">了解更多</button>
+      </div> -->
+    </section>
+
+    <!-- 公司简介 -->
+    <section class="company-profile">
+      <div class="profile-text">
+        <h2>About Xiangteng Machinery</h2>
+        <p>Founded in 2005, we are a comprehensive machinery manufacturer integrating R&D, production and sales. Adhering to the business philosophy of "Quality Oriented, Innovation Driven", we strive to provide customers with high-stability machinery and complete supporting services</p>
+        <p>With standardized production workshops and a professional R&D team, our product range includes customized non-standard equipment, automated production lines and general mechanical parts to satisfy diverse working conditions across various industries</p>
+        <div class="stats">
+          <div class="stat-item">
+            <div class="number">18+</div>
+            <div class="label">Years of industry experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">500+</div>
+            <div class="label">Cooperative Customers</div>
+          </div>
+          <div class="stat-item">
+            <div class="number">10K+</div>
+            <div class="label">Service Families</div>
+          </div>
+        </div>
+        <a href="about.html" class="btn-cert">Check qualification certification</a>
+      </div>
+      <div class="profile-image">
+        <img src="assets/home/工厂.jpg" alt="公司展厅">
+      </div>
+    </section>
+
+    <!-- 使命愿景 -->
+    <section class="mission-vision">
+      <div class="card blue">
+        <h3>Corporate Mission</h3>
+        <p>Craft quality equipment with fine workmanship, fuel industrial progress through innovation and support efficient production for all industries</p>
+      </div>
+      <div class="card">
+        <h3>Corporate Vision</h3>
+        <p>To grow into a leading brand in China's machinery manufacturing industry, empower all sectors with Xiangteng Machinery and set the benchmark for precision intelligent manufacturing</p>
+      </div>
+    </section>
+
+    <!-- 核心价值观 -->
+    <section class="core-values">
+      <h2>Core Values</h2>
+      <div class="values-grid">
+        <div class="value-item blue">
+          <h4>Quality Firsted</h4>
+          <p>We select premium raw materials, standardize whole manufacturing procedures and strict inspections to guarantee every machine meets high-precision quality requirements</p>
+        </div>
+        <div class="value-item">
+          <h4>Design Innovation</h4>
+          <p>We keep pace with global intelligent manufacturing technologies and develop customized machinery combining practical industry experience</p>
+        </div>
+        <div class="value-item">
+          <h4>Customer-oriented</h4>
+          <p>Uphold integrity standards, standardize after-sales service and achieve win-win cooperation with all partners</p>
+        </div>
+        <div class="value-item blue">
+          <h4>Integrity Management</h4>
+          <p>Abide by business ethics, treat clients and partners sincerely and build solid corporate reputation</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================ -->
+  <!-- 底部信息栏容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="footer-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 浮动联系按钮容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="float-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 联系模态框容器 - 由JS动态渲染 -->
+  <!-- ============================================ -->
+  <div id="modal-container"></div>
+
+  <!-- ============================================ -->
+  <!-- 引入外部JavaScript文件 -->
+  <!-- ============================================ -->
+  <script src="js/components.js"></script>
+  <script>
+    // 页面加载完成后初始化组件
+    document.addEventListener('DOMContentLoaded', function() {
+      initPageComponents('index');
+    });
+  </script>
+</body>
+</html>
